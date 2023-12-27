@@ -1,0 +1,31 @@
+.nav {
+	position: sticky;
+	bottom: 0;
+	background-color: #fff;
+	box-shadow: #0000003d 0 0 4px;
+}
+
+.list {
+	padding: 10px 20px;
+
+	display: flex;
+	justify-content: space-between;
+
+	list-style-type: none;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.link {
+	font-size: 14px;
+	text-decoration: none;
+	color: var(--mantine-color-gray-7);
+}
+
+.icon {
+	color: var(--mantine-color-gray-7);
+}
