@@ -29,8 +29,10 @@ export default function RootLayout({
 				style={{ backgroundColor: "#eee" }}
 			>
 				<MantineProvider defaultColorScheme="light" theme={theme}>
-					<main>
-						<div className="content">{children}</div>
+					<main className="main">
+						<div className="container">
+							<div className="content">{children}</div>
+						</div>
 					</main>
 				</MantineProvider>
 			</body>
