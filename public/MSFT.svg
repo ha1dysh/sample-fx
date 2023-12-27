@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .a {
+        fill: #f0f0f0;
+      }
+
+      .b {
+        fill: #f45326;
+      }
+
+      .c {
+        fill: #82bc06;
+      }
+
+      .d {
+        fill: #ffbb08;
+      }
+
+      .e {
+        fill: #05a6f1;
+      }
+    </style>
+  </defs>
+  <g>
+    <circle class="a" cx="28" cy="28" r="28"/>
+    <path class="b" d="M11.667,11.667H26.833V26.833H11.667Z"/>
+    <path class="c" d="M29.167,11.667H44.333V26.833H29.167Z"/>
+    <path class="d" d="M29.167,29.167H44.333V44.333H29.167Z"/>
+    <path class="e" d="M11.667,29.167H26.833V44.333H11.667Z"/>
+  </g>
+</svg>
