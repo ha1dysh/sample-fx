@@ -1,0 +1,57 @@
+.stockInfo {
+	width: 100%;
+	padding: 20px 10px;
+
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	box-shadow: #0000003d 0 4px 2px -2px;
+}
+
+.amount {
+	width: 80%;
+	margin: 0 auto 10px;
+	display: flex;
+}
+
+.amountInput {
+	width: 100%;
+
+	border: none;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+	color: #000;
+}
+
+.amountButtons {
+	width: 75px;
+	height: 50px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #fff;
+	border: 1px solid #ccc;
+
+	color: var(--mantine-color-blue-5);
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.orderButton {
+	width: 100%;
+	padding: 16px;
+
+	background-color: var(--mantine-color-blue-5);
+	border: none;
+
+	font-size: 20px;
+	color: #fff;
+	border-radius: 4px;
+}
