@@ -25,7 +25,7 @@ export default function Menu() {
 						size={32}
 						className={styles.icon}
 						color={
-							step < 7
+							step <= 8
 								? "var(--mantine-color-green-5)"
 								: "var(--mantine-color-gray-7)"
 						}
@@ -35,7 +35,7 @@ export default function Menu() {
 						href="#"
 						style={{
 							color:
-								step < 7
+								step <= 8
 									? "var(--mantine-color-green-5)"
 									: "var(--mantine-color-gray-7)",
 						}}

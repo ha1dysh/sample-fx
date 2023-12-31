@@ -1,24 +1,22 @@
 .welcomePage {
-	position: absolute;
-	inset: 0;
+	height: calc(100dvh - 32px);
 	max-width: 480px;
-
 	margin: 0 auto;
-	padding-top: 350px;
+	padding-bottom: 5vh;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	gap: 20px;
 
+	text-align: center;
+
 	background: url("../../../../public/phone-frame.svg") no-repeat center;
-	background-position-y: 50px;
-	background-color: #fff;
+	background-position: 50% 5%;
 }
 
 .yatoro {
 	position: absolute;
 	top: 190px;
-	border: none;
 }

@@ -96,7 +96,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 			<AnimatePresence>{letsSellTip}</AnimatePresence>
 			<AnimatePresence>{letsBuyTip}</AnimatePresence>
 			<Grid>
-				<Grid.Col span={5}>
+				<Grid.Col span={6}>
 					<Group gap="xs">
 						<Image
 							src={`./${ticker}.svg`}
@@ -117,7 +117,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 					</Group>
 				</Grid.Col>
 
-				<Grid.Col span={3.5}>
+				<Grid.Col span={3}>
 					<motion.div
 						animate={{
 							backgroundColor: ["#00a", "#08f"],
@@ -143,7 +143,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 					</motion.div>
 				</Grid.Col>
 
-				<Grid.Col span={3.5}>
+				<Grid.Col span={3}>
 					<motion.div
 						animate={{
 							backgroundColor: ["#00a", "#08f"],

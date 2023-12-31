@@ -25,6 +25,8 @@ export default function StartScreen() {
 			fullScreen
 			transitionProps={{ transition: "fade", duration: 200 }}
 			withCloseButton={false}
+			h="100%"
+			p={0}
 		>
 			<div className={styles.welcomePage}>
 				<motion.div

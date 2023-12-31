@@ -52,7 +52,7 @@ const useGlobalState = create<State>((set) => ({
 	fetchStocks: async () => {
 		set({
 			stocks: await new Promise((resolve) =>
-				setTimeout(() => resolve(fakeData), 500)
+				setTimeout(() => resolve(fakeData), 100)
 			),
 		});
 

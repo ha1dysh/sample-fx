@@ -11,8 +11,11 @@ import Image from "next/image";
 import { intl } from "@/services/common";
 import Menu from "@/components/layout/menu/menu";
 import Tooltip from "@/components/shared/tooltip/tooltip";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Portfolio() {
+	const router = useRouter();
 	const { step } = useGlobalState((s) => s.useSteps);
 	const stocks = useGlobalState((s) => s.stocks);
 	const filtered = stocks.filter(
@@ -33,6 +36,12 @@ export default function Portfolio() {
 			Dive into our App now!
 		</Tooltip>
 	);
+
+	useEffect(() => {
+		if (step < 5) {
+			router.push("/");
+		}
+	}, [router, step]);
 
 	return (
 		<div className={styles.page}>

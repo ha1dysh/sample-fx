@@ -29,7 +29,7 @@ function Received() {
 			exit={{ opacity: 0, y: 20 }}
 		>
 			<Image
-				src={`../${step < 7 ? "TSLA" : "NFLX"}.svg`}
+				src={`./${step < 7 ? "TSLA" : "NFLX"}.svg`}
 				alt="stock logo"
 				width={50}
 				height={50}

@@ -28,7 +28,11 @@ export default function RootLayout({
 				className={inter.className}
 				style={{ backgroundColor: "#eee" }}
 			>
-				<MantineProvider defaultColorScheme="light" theme={theme}>
+				<MantineProvider
+					defaultColorScheme="light"
+					theme={theme}
+					forceColorScheme="light"
+				>
 					<main className="main">
 						<div className="container">
 							<div className="content">{children}</div>
