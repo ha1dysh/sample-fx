@@ -34,8 +34,6 @@ export default function Tooltip({
 	function handleClick() {
 		nextStep();
 		if (step === 8) {
-			console.log("asd");
-
 			router.push("/portfolio");
 		}
 	}
@@ -53,21 +51,44 @@ export default function Tooltip({
 				{children}
 			</Text>
 
-			{button && (
-				<Button w="75%" h="40" fz="lg" my={10} onClick={handleClick}>
-					{step <= 10 ? (
-						button
-					) : (
-						<Link
-							href="https://play.google.com/store/games?hl=en&gl=US"
-							target="_blank"
-							style={{ color: "#fff", textDecoration: "none" }}
-						>
-							{button}
-						</Link>
-					)}
+			{button && step <= 9 && (
+				<Button
+					w="75%"
+					h="40"
+					fz="lg"
+					c="#fff"
+					my={10}
+					onClick={handleClick}
+				>
+					{button}
 				</Button>
+			)}
+
+			{step > 9 && (
+				<Link href="https://play.google.com/" target="_blank">
+					<Button
+						w="75%"
+						h="40"
+						fz="lg"
+						my={10}
+						onClick={handleClick}
+					>
+						{button}
+					</Button>
+				</Link>
 			)}
 		</motion.div>
 	);
 }
+
+/* {step <= 10 ? ( */
+
+/* ) : (
+	<Link
+		href="https://play.google.com/store/games?hl=en&gl=US"
+		target="_blank"
+		style={{ color: "#fff", textDecoration: "none" }}
+	>
+		{button}
+	</Link>
+)} */

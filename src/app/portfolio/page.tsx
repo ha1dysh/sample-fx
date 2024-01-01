@@ -145,19 +145,19 @@ const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 					</Group>
 				</Grid.Col>
 
-				<Grid.Col span={2.5}>
+				<Grid.Col span={2.7}>
 					<Text fz="sm" c="green.5">
 						{(profit / 10).toFixed(2)}
 					</Text>
 				</Grid.Col>
 
-				<Grid.Col span={2}>
+				<Grid.Col span={1.9}>
 					<Text fz="sm" c="green.5">
 						{(profit * (Math.random() * 5)).toFixed(2)}
 					</Text>
 				</Grid.Col>
 
-				<Grid.Col span={2.5} p={0}>
+				<Grid.Col span={2.4} p={0}>
 					<Text fz="sm" p={0}>
 						{intl(profit * (Math.random() * 20) + 10000)}
 					</Text>

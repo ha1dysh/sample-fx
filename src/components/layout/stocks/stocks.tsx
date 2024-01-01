@@ -95,7 +95,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 		>
 			<AnimatePresence>{letsSellTip}</AnimatePresence>
 			<AnimatePresence>{letsBuyTip}</AnimatePresence>
-			<Grid>
+			<Grid align="center">
 				<Grid.Col span={6}>
 					<Group gap="xs">
 						<Image
@@ -117,7 +117,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 					</Group>
 				</Grid.Col>
 
-				<Grid.Col span={3}>
+				<Grid.Col span={2.7} offset={0.3} p={0}>
 					<motion.div
 						animate={{
 							backgroundColor: ["#00a", "#08f"],
@@ -143,7 +143,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 					</motion.div>
 				</Grid.Col>
 
-				<Grid.Col span={3}>
+				<Grid.Col span={2.7} offset={0.3} p={0}>
 					<motion.div
 						animate={{
 							backgroundColor: ["#00a", "#08f"],
@@ -159,7 +159,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 					>
 						<Text
 							p={8}
-							ta="right"
+							ta="center"
 							size="lg"
 							c={isTesla ? "#fff" : "#000"}
 							bg={isTesla ? "" : "gray.2"}

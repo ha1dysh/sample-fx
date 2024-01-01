@@ -30,7 +30,6 @@ const DynamicStocks = dynamic(
 
 export default function Watchlist() {
 	const { step, nextStep } = useGlobalState((s) => s.useSteps);
-	console.log(step);
 
 	const allInTip = step === 1 && (
 		<DynamicTooltip button="Next" coords={{ bottom: "80px" }} delay={1}>
