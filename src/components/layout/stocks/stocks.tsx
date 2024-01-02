@@ -133,7 +133,7 @@ export const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 					>
 						<Text
 							size="lg"
-							ta="right"
+							ta="center"
 							p={8}
 							c={isNetflix ? "#fff" : "#000"}
 							bg={isNetflix ? "" : "gray.2"}
