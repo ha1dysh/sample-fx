@@ -80,15 +80,3 @@ export default function Tooltip({
 		</motion.div>
 	);
 }
-
-/* {step <= 10 ? ( */
-
-/* ) : (
-	<Link
-		href="https://play.google.com/store/games?hl=en&gl=US"
-		target="_blank"
-		style={{ color: "#fff", textDecoration: "none" }}
-	>
-		{button}
-	</Link>
-)} */
