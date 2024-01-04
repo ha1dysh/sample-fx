@@ -27,7 +27,7 @@ const DynamicStocks = dynamic(
 );
 
 export default function Watchlist() {
-	const { step, nextStep } = useGlobalState((s) => s.useSteps);
+	const { step } = useGlobalState((s) => s.useSteps);
 
 	const allInTip = step === 1 && (
 		<DynamicTooltip button="Next" coords={{ bottom: "80px" }} delay={1}>
@@ -40,8 +40,9 @@ export default function Watchlist() {
 	const success = step === 8 && (
 		<DynamicTooltip
 			button="Check your Portfolio"
-			coords={{ bottom: "-230px" }}
+			coords={{ bottom: "30%" }}
 			delay={1}
+			position="fixed"
 		>
 			Both trades opened successfully
 		</DynamicTooltip>
@@ -55,7 +56,7 @@ export default function Watchlist() {
 
 			<Group justify="space-between" px={20}>
 				<CustomTitle>My Watchlist</CustomTitle>
-				<Group>
+				<Group gap={0}>
 					<IconAdjustmentsHorizontal
 						size={30}
 						color="var(--mantine-color-green-5)"
@@ -66,19 +67,22 @@ export default function Watchlist() {
 					/>
 				</Group>
 			</Group>
+			<div>
+				<Tags
+					tags={[
+						"All",
+						"Crypto",
+						"Indices",
+						"Stocks",
+						"Currencies",
+						"ETFs",
+					]}
+				/>
+			</div>
 
-			<Tags
-				tags={[
-					"All",
-					"Crypto",
-					"Indices",
-					"Stocks",
-					"Currencies",
-					"ETFs",
-				]}
-			/>
-
-			<DynamicStocks />
+			<div className={styles.stocksWrapper}>
+				<DynamicStocks />
+			</div>
 
 			<AnimatePresence>{allInTip}</AnimatePresence>
 			<AnimatePresence>{success}</AnimatePresence>

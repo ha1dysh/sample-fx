@@ -9,7 +9,7 @@ export default function Order() {
 	const { nextStep } = useGlobalState((s) => s.useSteps);
 
 	return (
-		<Stack m="auto" maw="80%" justify="center" align="center">
+		<Stack gap={0} m="auto" maw="85%" justify="center" align="center">
 			<Text fz={22}>{`Cash Available ${intl(balance)}`}</Text>
 
 			<motion.button
@@ -29,7 +29,7 @@ export default function Order() {
 				Set order
 			</motion.button>
 
-			<Group gap={4} mt={10}>
+			<Group gap={0}>
 				<Text fz="xs" fw="bold">
 					OVERNIGHT FEE
 				</Text>

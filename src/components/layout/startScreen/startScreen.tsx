@@ -25,13 +25,10 @@ export default function StartScreen() {
 			fullScreen
 			transitionProps={{ transition: "fade", duration: 200 }}
 			withCloseButton={false}
-			h="100%"
-			p={0}
 		>
 			<div className={styles.welcomePage}>
 				<motion.div
 					className={styles.yatoro}
-					onClick={handleClick}
 					initial={{
 						opacity: 0,
 						scale: 0,
@@ -44,42 +41,52 @@ export default function StartScreen() {
 					}}
 					transition={{ duration: 0.75, ease: "easeInOut" }}
 				>
-					<Button w={125} h={125} size="compact-xl" fw="bold">
+					<Button
+						className={styles.yatoroBtn}
+						onClick={handleClick}
+						w={125}
+						h={125}
+						size="compact-xl"
+						fw="bold"
+					>
 						YATORO
 					</Button>
 				</motion.div>
+				<div className={styles.textWrapper}>
+					<motion.div
+						className={styles.welcome}
+						initial={{ opacity: 0, y: -20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.75, ease: "easeInOut" }}
+					>
+						<Title>Welcome back!</Title>
+					</motion.div>
 
-				<motion.div
-					initial={{ opacity: 0, y: -20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.75, ease: "easeInOut" }}
-				>
-					<Title>Welcome back!</Title>
-				</motion.div>
+					<motion.p
+						className={styles.text}
+						initial={{ opacity: 0, scale: 0.6 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 0.75,
+							ease: "easeInOut",
+						}}
+					>
+						{`Explore the app's key features before diving in.`}
+					</motion.p>
 
-				<motion.p
-					initial={{ opacity: 0, scale: 0.6 }}
-					animate={{ opacity: 1, scale: 1 }}
-					transition={{
-						duration: 0.75,
-						ease: "easeInOut",
-					}}
-				>
-					{`Explore the app's key features before diving in.`}
-				</motion.p>
-
-				<motion.div
-					className={styles.btn}
-					onClick={handleClick}
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{
-						duration: 0.75,
-						ease: "easeInOut",
-					}}
-				>
-					<Button>{`Let's get started!`}</Button>
-				</motion.div>
+					<motion.div
+						className={styles.btn}
+						onClick={handleClick}
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{
+							duration: 0.75,
+							ease: "easeInOut",
+						}}
+					>
+						<Button>{`Let's get started!`}</Button>
+					</motion.div>
+				</div>
 			</div>
 		</Modal>
 	);

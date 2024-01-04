@@ -11,6 +11,8 @@ import useGlobalState from "@/services/store";
 
 export default function Menu() {
 	const { step } = useGlobalState((s) => s.useSteps);
+	console.log(step);
+
 	return (
 		<nav className={styles.nav}>
 			<ul className={styles.list}>

@@ -1,21 +1,36 @@
 .welcomePage {
+	position: relative;
+
 	height: calc(100dvh - 32px);
 	max-width: 480px;
 	margin: 0 auto;
-	padding-top: 500px;
 
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: center;
 	gap: 20px;
 
 	text-align: center;
-
-	background: url("../../../../public/phone-frame.svg") no-repeat center;
-	background-position: 50% 5%;
 }
 
 .yatoro {
-	position: absolute;
-	top: 190px;
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: url("../../../../public/phone-frame.svg") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.yatoroBtn:focus-visible {
+	outline: none;
+}
+
+.textWrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }

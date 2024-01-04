@@ -1,5 +1,5 @@
 .nav {
-	position: fixed;
+	position: sticky;
 	width: 100%;
 	max-width: 480px;
 	bottom: 0;

@@ -3,8 +3,8 @@ import { Stack, Group, Paper, Text } from "@mantine/core";
 
 export default function Leverage() {
 	return (
-		<Stack maw="480px" w="80%" mx="auto" mt={10} align="center" bg="gray.0">
-			<Group h={100}>
+		<Stack gap={0} w="85%" mx="auto" align="center" bg="gray.0">
+			<Group>
 				<Stack gap={0} p={8}>
 					<Text fz="sm" c="red.5">
 						{intl(10000 / 2)}

@@ -21,4 +21,5 @@
 	border: 1px solid var(--mantine-color-gray-3);
 	border-radius: 24px;
 	color: var(--mantine-color-gray-8);
+	white-space: nowrap;
 }

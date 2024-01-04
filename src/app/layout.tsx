@@ -34,9 +34,7 @@ export default function RootLayout({
 					forceColorScheme="light"
 				>
 					<main className="main">
-						<div className="container">
-							<div className="content">{children}</div>
-						</div>
+						<div className="content">{children}</div>
 					</main>
 				</MantineProvider>
 			</body>

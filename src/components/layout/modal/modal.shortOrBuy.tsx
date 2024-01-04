@@ -10,7 +10,6 @@ export default function ShortOrBuy({ step }: { step: number }) {
 			w="100%"
 			justify="center"
 			align="center"
-			mt={20}
 			p={15}
 			pos="relative"
 			bg="blue.5"

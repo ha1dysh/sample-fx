@@ -12,6 +12,7 @@ type Props = {
 	button?: string;
 	coords?: { top?: string; bottom?: string; left?: string; right?: string };
 	delay?: number;
+	position?: "absolute" | "fixed";
 };
 
 export default function Tooltip({
@@ -19,6 +20,7 @@ export default function Tooltip({
 	button,
 	coords = { bottom: "0", left: "0", top: "0", right: "0" },
 	delay = 0,
+	position = "absolute",
 }: Props) {
 	const router = useRouter();
 	const { step, nextStep } = useGlobalState((s) => s.useSteps);
@@ -45,11 +47,9 @@ export default function Tooltip({
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ duration: 0.5, delay }}
 			exit={{ opacity: 0, transition: { delay: 0, duration: 1 } }}
-			style={{ ...coords }}
+			style={{ ...coords, position }}
 		>
-			<Text lh={1.7} fz="lg">
-				{children}
-			</Text>
+			<Text fz="lg">{children}</Text>
 
 			{button && step <= 9 && (
 				<Button

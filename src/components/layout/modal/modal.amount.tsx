@@ -6,7 +6,7 @@ import styles from "./modal.module.css";
 export default function Amount({ high }: any) {
 	return (
 		<>
-			<Group justify="space-between" w="80%" mx="auto" my={15}>
+			<Group justify="space-between" mb={10} w="85%" mx="auto">
 				<Text fw="bold">AMOUNT</Text>
 
 				<Group gap={4} className={styles.exchange}>
@@ -21,7 +21,7 @@ export default function Amount({ high }: any) {
 			</Group>
 
 			<div className={styles.amount}>
-				<button className={styles.buttons}>
+				<button className={styles.amountButtons}>
 					<IconMinus size={32} strokeWidth={4} />
 				</button>
 				<input

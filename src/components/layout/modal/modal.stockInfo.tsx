@@ -14,7 +14,7 @@ export default function StockInfo({
 	step: number;
 	stock: Stock | undefined;
 }) {
-	const shortOrBuy = step < 4;
+	const shortOrBuy = step < 5;
 	if (!stock) {
 		return;
 	}
@@ -63,10 +63,10 @@ export default function StockInfo({
 					</Text>
 				</Group>
 
-				<Group gap={4} c="gray.6" align="center">
+				<Group gap={0} c="gray.6" align="center">
 					<Text fz="xs">PRICE BY NASDAQ, IN USD |</Text>
 					<IconClockHour3 size={19} />
-					<Text fz="xs">MARKET CLOSED</Text>
+					<Text fz="xs">MARKET OPENED</Text>
 				</Group>
 			</Stack>
 		</div>

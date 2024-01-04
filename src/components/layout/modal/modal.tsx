@@ -39,14 +39,33 @@ function OrderModal() {
 				transitionProps={{ transition: "fade", duration: 500 }}
 				withCloseButton={false}
 				padding={0}
+				h="100%"
 			>
-				<Stack maw="480px" m="auto" gap={0}>
-					<ShortOrBuy step={step} />
-					<StockInfo step={step} stock={stock} />
-					<Amount high={stock?.high} />
-					<Leverage />
-					<Order />
-				</Stack>
+				<div className={styles.container}>
+					<Stack
+						justify="space-evenly"
+						gap={0}
+						maw="480px"
+						mah={850}
+						h="100dvh"
+					>
+						<div>
+							<ShortOrBuy step={step} />
+						</div>
+						<div>
+							<StockInfo step={step} stock={stock} />
+						</div>
+						<div>
+							<Amount high={stock?.high} />
+						</div>
+						<div>
+							<Leverage />
+						</div>
+						<div>
+							<Order />
+						</div>
+					</Stack>
+				</div>
 			</Modal>
 		</>
 	);

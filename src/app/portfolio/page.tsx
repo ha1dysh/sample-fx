@@ -23,7 +23,7 @@ export default function Portfolio() {
 	);
 
 	const ourApp = step === 9 && (
-		<Tooltip button="Next" coords={{ bottom: "90px" }} delay={1}>
+		<Tooltip button="Next" coords={{ bottom: "0" }} delay={1}>
 			With our App, trading and staying updated with latest market news is
 			seamless and interactive
 		</Tooltip>
@@ -63,35 +63,25 @@ export default function Portfolio() {
 				</Group>
 			</Group>
 
-			<Tags
-				tags={[
-					"All",
-					"Crypto",
-					"Indices",
-					"Stocks",
-					"Currencies",
-					"ETFs",
-				]}
-			/>
+			<Tags tags={["Orders", "Manual Trades", "Stocks"]} />
 
 			<div className={styles.container} id="UList">
 				<Grid c="gray.6" px={20} py={10}>
-					<Grid.Col span={4.5}>
+					<Grid.Col span={5.3}>
 						<Text mr={40}>Asset</Text>
 					</Grid.Col>
-					<Grid.Col span={3}>
+					<Grid.Col span={2.4}>
 						<Text ta="left">Change</Text>
 					</Grid.Col>
-					<Grid.Col span={2}>
+					<Grid.Col span={1.9}>
 						<Text ta="left">P/L</Text>
 					</Grid.Col>
-					<Grid.Col span={2.5}>
-						<Text ta="right">Value</Text>
+					<Grid.Col span={2.4} c="blue.5">
+						<Text ta="left">Value</Text>
 					</Grid.Col>
 				</Grid>
 
 				<Divider w="90%" m="auto" p={10} />
-
 				<ul className={styles.list}>
 					{filtered.map((stock, index) => (
 						<Item key={stock.ticker} stock={stock} index={index} />
@@ -124,7 +114,7 @@ const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 			}}
 		>
 			<Grid align="center">
-				<Grid.Col span={5}>
+				<Grid.Col span={5.3} p={0}>
 					<Group gap="xs">
 						<Image
 							src={`./${ticker}.svg`}
@@ -144,19 +134,16 @@ const Item = ({ stock, index }: { stock: Stock; index: number }) => {
 						</Stack>
 					</Group>
 				</Grid.Col>
-
-				<Grid.Col span={2.7}>
-					<Text fz="sm" c="green.5">
+				<Grid.Col span={2.4}>
+					<Text ta="center" fz="sm" c="green.5">
 						{(profit / 10).toFixed(2)}
 					</Text>
 				</Grid.Col>
-
 				<Grid.Col span={1.9}>
 					<Text fz="sm" c="green.5">
 						{(profit * (Math.random() * 5)).toFixed(2)}
 					</Text>
 				</Grid.Col>
-
 				<Grid.Col span={2.4} p={0}>
 					<Text fz="sm" p={0}>
 						{intl(profit * (Math.random() * 20) + 10000)}

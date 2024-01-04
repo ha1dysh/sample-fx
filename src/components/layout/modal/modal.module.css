@@ -1,17 +1,26 @@
+.container {
+	min-height: 100dvh;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .stockInfo {
-	width: 100%;
-	padding: 20px 10px;
+	max-width: 90%;
+	margin: auto;
 
 	display: flex;
 	align-items: center;
-	gap: 16px;
+	gap: 8px;
 
 	box-shadow: #0000003d 0 4px 2px -2px;
 }
 
 .amount {
-	width: 80%;
-	margin: 0 auto 10px;
+	width: 85%;
+	margin: 0 auto;
 	display: flex;
 }
 

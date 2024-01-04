@@ -10,23 +10,24 @@ ul {
 }
 
 .main {
-	max-width: 480px;
-	margin: auto;
-	height: 100dvh;
-
-	background-color: #fff;
-}
-
-.container {
 	height: 100%;
+	margin: auto;
 
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .content {
+	height: 100%;
+	max-height: 1000px;
+	width: 100%;
+	max-width: 480px;
+
 	flex: 1;
 	overflow: scroll;
+	background-color: #fff;
 }
 
 .content::-webkit-scrollbar {
